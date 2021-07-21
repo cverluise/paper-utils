@@ -1,10 +1,9 @@
 import numpy as np
-import pandas as pd
 from typing import Dict, List
 
 
 def query_country_timespan(
-    df: pd.DataFrame,
+    df,
     country_timespan: Dict,
     to_nan: List,
     country_code: str = "country_code",

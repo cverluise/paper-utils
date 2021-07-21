@@ -29,3 +29,4 @@ COLOR = [
     "#801428",
     "#3f0000",
 ] * 10
+# https://gka.github.io/palettes

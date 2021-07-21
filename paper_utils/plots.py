@@ -1,8 +1,4 @@
 import matplotlib.pyplot as plt
-import pandas as pd
-
-
-# https://gka.github.io/palettes
 
 
 def format_label(s):
@@ -24,11 +20,7 @@ def format_label(s):
 
 
 def df_plot(
-    df: pd.Dataframe,
-    subplots: bool = False,
-    ylabel: str = "",
-    legend: bool = True,
-    **kwargs
+    df, subplots: bool = False, ylabel: str = "", legend: bool = True, **kwargs
 ):
     """
     A simple wrapper around pd.Dataframe.plot
