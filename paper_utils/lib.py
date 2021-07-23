@@ -31,7 +31,7 @@ COLOR = [
 ] * 10
 # https://gka.github.io/palettes
 
-offices = [
+OFFICES = [
     "US",
     "CN",
     "EP",
@@ -47,7 +47,7 @@ offices = [
     "IN",
     "ZA",
 ]
-technologies = [
+TECHNOLOGIES = [
     "additivemanufacturing",
     "blockchain",
     "computervision",
