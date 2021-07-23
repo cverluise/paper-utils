@@ -47,6 +47,7 @@ OFFICES = [
     "IN",
     "ZA",
 ]
+
 TECHNOLOGIES = [
     "additivemanufacturing",
     "blockchain",
