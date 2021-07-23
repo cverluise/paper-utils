@@ -30,3 +30,29 @@ COLOR = [
     "#3f0000",
 ] * 10
 # https://gka.github.io/palettes
+
+offices = [
+    "US",
+    "CN",
+    "EP",
+    "JP",
+    "GB",
+    "FR",
+    "DE",
+    "IT",
+    "CA",
+    "KR",
+    "BR",
+    "RU",
+    "IN",
+    "ZA",
+]
+technologies = [
+    "additivemanufacturing",
+    "blockchain",
+    "computervision",
+    "genomeediting",
+    "hydrogenstorage",
+    "naturallanguageprocessing",
+    "selfdrivingvehicle",
+]
