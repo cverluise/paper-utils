@@ -1,3 +1,6 @@
+from typing import Dict
+
+
 def get_technology(table: str, technology: str):
     technology = technology if technology else table.split("_")[-3]
     return technology
@@ -8,11 +11,7 @@ def get_model(table: str, model: str = None):
     return model
 
 
-import numpy as np
-from typing import Dict, List
-
-
-def query_country_timespan(
+def query_technology_timespan(
     df,
     technology_timespan: Dict,
     technology: str = "technology",
