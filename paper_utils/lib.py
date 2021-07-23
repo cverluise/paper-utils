@@ -18,13 +18,13 @@ COUNTRY_PATEE_TIMESPAN = {
 }
 
 TECHNOLOGY_TIMESPAN = {
-    "additivemanufacturing": (1973, 2019),
-    "blockchain": (1983, 2019),
-    "computervision": (1965, 2019),
-    "genomeediting": (1979, 2019),
-    "hydrogenstorage": (1975, 2019),
-    "naturallanguageprocessing": (1964, 2019),
-    "selfdrivingvehicle": (1965, 2019),
+    "additivemanufacturing": (1986, 2019),
+    "blockchain": (1998, 2019),
+    "computervision": (1969, 2019),
+    "genomeediting": (1983, 2019),
+    "hydrogenstorage": (1994, 2019),
+    "naturallanguageprocessing": (1967, 2019),
+    "selfdrivingvehicle": (1970, 2019),
 }
 
 STYLE = (["-"] * 5 + ["--"] * 5 + [".-"] * 5 + [":"] * 5) * 10
