@@ -83,4 +83,4 @@ CLAUSE_FIRST_PUB = """
     AND NOT(country_code="BR" AND kind_code not in ("A", "A2", "A3"))
     AND NOT(country_code="RU" AND kind_code not in ("A"))
     # all IN
-    AND NOT(country_code="ZA" AND kind_code not in ("A"))"""
+    AND NOT(country_code="ZA" AND kind_code not in ("B"))"""
