@@ -70,17 +70,17 @@ TECHNOLOGIES = [
 ]
 
 CLAUSE_FIRST_PUB = """
-    NOT(country_code="US" AND kind_code not in ("A", "A1", "B1"))
-    AND NOT(country_code="CN" AND kind_code not in ("A"))
-    AND NOT(country_code="EP" AND kind_code not in ("A1", "A2"))
-    AND NOT(country_code="JP" AND kind_code not in ("A"))
-    AND NOT(country_code="GB" and kind_code not in ("A"))
-    AND NOT(country_code="FR" and kind_code not in ("A", "A1"))
-    AND NOT(country_code="DE" and kind_code not in ("A", "A1", "B3", "C1"))
-    AND NOT(country_code="IT" AND kind_code not in ("A1", "B") )
-    AND NOT(country_code="CA" AND kind_code not in ("A", "A1"))
-    AND NOT(country_code="KR" AND kind_code not in ("A", "B2"))
-    AND NOT(country_code="BR" AND kind_code not in ("A", "A2", "A3"))
-    AND NOT(country_code="RU" AND kind_code not in ("A"))
+    NOT(p.country_code="US" AND p.kind_code not in ("A", "A1", "B1"))
+    AND NOT(p.country_code="CN" AND p.kind_code not in ("A"))
+    AND NOT(p.country_code="EP" AND p.kind_code not in ("A1", "A2"))
+    AND NOT(p.country_code="JP" AND p.kind_code not in ("A"))
+    AND NOT(p.country_code="GB" and p.kind_code not in ("A"))
+    AND NOT(p.country_code="FR" and p.kind_code not in ("A", "A1"))
+    AND NOT(p.country_code="DE" and p.kind_code not in ("A", "A1", "B3", "C1"))
+    AND NOT(p.country_code="IT" AND p.kind_code not in ("A1", "B") )
+    AND NOT(p.country_code="CA" AND p.kind_code not in ("A", "A1"))
+    AND NOT(p.country_code="KR" AND p.kind_code not in ("A", "B2"))
+    AND NOT(p.country_code="BR" AND p.kind_code not in ("A", "A2", "A3"))
+    AND NOT(p.country_code="RU" AND p.kind_code not in ("A"))
     # all IN
-    AND NOT(country_code="ZA" AND kind_code not in ("B"))"""
+    AND NOT(p.country_code="ZA" AND p.kind_code not in ("B"))"""
