@@ -20,7 +20,12 @@ def format_label(s):
 
 
 def df_plot(
-    df, subplots: bool = False, ylabel: str = "", legend: bool = True, **kwargs
+    df,
+    subplots: bool = False,
+    ylabel: str = "",
+    legend: bool = True,
+    ncol: int = None,
+    **kwargs
 ):
     """
     A simple wrapper around pd.Dataframe.plot
@@ -30,6 +35,7 @@ def df_plot(
       subplots: whether each columns should be plotted as a subplot
       ylabel: name of the y-axis label
       legend: whether there should be a legend
+      ncol: number of columns in legend
       kwargs: key-worded arguments to be passed to pd.Dataframe.plot()
 
     **Usage:**
@@ -51,7 +57,7 @@ def df_plot(
     if not subplots:
         plt.ylabel(ylabel)
         if legend:
-            ncol = min(5, len(tmp.columns))
+            ncol = min(5, len(tmp.columns)) if not ncol else ncol
             plt.legend(
                 loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=ncol, frameon=False
             )
