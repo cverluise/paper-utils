@@ -42,7 +42,7 @@ def query_country_timespan(
             for bools in zip(
                 (tmp["country_code"] == "DE").values,
                 (1945 < tmp[publication_year]).values,
-                (1950 >= tmp[publication_year]).values,
+                (1950 > tmp[publication_year]).values,
             )
         ]
         tmp.loc[force_nan_de, to_nan] = np.nan
