@@ -8,6 +8,7 @@ def query_country_timespan(
     to_nan: List,
     country_code: str = "country_code",
     publication_year: str = "publication_year",
+    local_analysis: bool = False,
 ):
     """
     Truncate `df` based on `country_code` and `publication_year` as defined in `country_timespan`
@@ -18,7 +19,7 @@ def query_country_timespan(
         to_nan: list of variables to be set to null for DE between 1945 and 1950
         country_code: name of the country_code variable
         publication_year: name of the publication_year variable
-
+        local_analysis: remove data for France if statistcalarea 1,2 or 3 is used in the analysis
     **Usage:**
         ```python
         from paper_utils.patentcity import query_country_timespan
@@ -46,5 +47,14 @@ def query_country_timespan(
             )
         ]
         tmp.loc[force_nan_de, to_nan] = np.nan
-
+    if local_analysis:
+        force_nan_fr = [
+            all(bools)
+            for bools in zip(
+                (tmp["country_code"] == "FR").values,
+                (1970 =< tmp[publication_year]).values,
+                (1980 > tmp[publication_year]).values,
+            )
+        ]
+        tmp.loc[force_nan_fr, to_nan] = np.nan
     return tmp
