@@ -52,7 +52,7 @@ def query_country_timespan(
             all(bools)
             for bools in zip(
                 (tmp["country_code"] == "FR").values,
-                (1970 =< tmp[publication_year]).values,
+                (1970 <= tmp[publication_year]).values,
                 (1980 > tmp[publication_year]).values,
             )
         ]
